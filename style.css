@@ -4,7 +4,8 @@ body {
     color: black;
   }
 
-p {font-size: 16px;}
+p {
+  font-size: 16px;}
 .margin {margin-bottom: 15px;}
 
 .container-fluid {
