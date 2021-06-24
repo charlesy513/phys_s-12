@@ -2147,6 +2147,13 @@ progress {
   margin-bottom: 0.5rem;
 }
 
+/*.footer {*/
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
 .col-form-label {
   padding-top: calc(0.375rem + 1px);
   padding-bottom: calc(0.375rem + 1px);
