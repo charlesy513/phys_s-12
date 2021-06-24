@@ -1238,6 +1238,16 @@ progress {
     margin-left: 91.6666666667%;
   }
 
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  .center-for-about {
+    text-align: center;
+  }
+
   .g-md-0,
 .gx-md-0 {
     --bs-gutter-x: 0;
@@ -6851,7 +6861,7 @@ textarea.form-control-lg {
 }
 
 .m-4 {
-  margin: 1.5rem !important;
+  margin: 1rem !important;
 }
 
 .m-5 {
@@ -7218,6 +7228,10 @@ textarea.form-control-lg {
   padding: 3rem !important;
 }
 
+.p-6 {
+  font-size: 20px;
+}
+
 .px-0 {
   padding-right: 0 !important;
   padding-left: 0 !important;
@@ -7274,8 +7288,12 @@ textarea.form-control-lg {
 }
 
 .py-5 {
-  padding-top: 0rem !important;
-  padding-bottom: 2rem !important;
+  padding-top: .75rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.py-6 {
+  font-size: 17px;
 }
 
 .pt-0 {
@@ -9416,7 +9434,7 @@ textarea.form-control-lg {
   }
 
   .gap-lg-5 {
-    gap: 3rem !important;
+    gap: 2rem !important;
   }
 
   .justify-content-lg-start {
