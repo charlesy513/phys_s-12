@@ -7604,7 +7604,7 @@ textarea.form-control-lg {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #ffffff !important;
 }
 
 .bg-dark {
@@ -9979,8 +9979,8 @@ textarea.form-control-lg {
   }
 
   .px-lg-5 {
-    padding-right: 0rem !important;
-    padding-left: 0rem !important;
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
   }
 
   .py-lg-0 {
