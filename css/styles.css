@@ -3878,6 +3878,12 @@ textarea.form-control-lg {
   list-style: none;
 }
 
+.normallink {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+}
+
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
