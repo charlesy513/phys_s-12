@@ -49,18 +49,33 @@
                 <li>Use Ohm's Law to determine the current through some part of the circuit</li>
                 <li>Use the Microcontroller Analog in (ADC) to measure the voltage of a potentiometer, or other voltage-divider-based sensor</li>
             </ul>
-            <p class="py-6">I made three circuits. The first was just two lightbulbs that were in series with one another.</p>
+            <p class="py-6">I made three circuits. The first was just two LEDs that were in series with one another.</p>
             <img src="../images/week 3/circuit1.jpg" style="width:45%" alt="2 lightbulbs in series">
-            <p class="py-6"><br>Next, I made a circuit that had three lightbulbs in series. The light obviously got dimmer. This happens because the resistance (lightbulbs are resistors) increased as the current remained the same. The voltage for each lightbulb therefore decreased.</p>
+            <p class="py-6"><br>Next, I made a circuit that had three LEDs in series. The brightness obviously got dimmer. This happens because the resistance (LEDs have internal resistance) increased as the current remained the same. The voltage for each LED therefore decreased.</p>
             <img src="../images/week 3/circuit2.jpg" style="width:45%" alt="3 lightbulbs in series">
-            <p class="py-6"><br>To make the three lightbulbs the same brightness as two lightbulbs, two of the three lightbulbs must be in parallel. This results in equal voltage going through each lightbulb that is in series with the first.</p>
+            <p class="py-6"><br>To make the three LEDs the same brightness as two LEDs, two of the three LEDs must be in parallel. This results in equal voltage going through each LED that is in series with the first.</p>
             <img src="../images/week 3/circuit3.jpg" style="width:45%" alt="3 lightbulbs, 2 parallel">
-            <p class="py-6"><br>I decided to use the circuit with two lights in parallel for my voltage demonstration. Here is a schematic for the circuit:</p>
-            <img src="../images/week 3/circuit4.png" style="width:45%" alt="schematic of 2 lightbulbsin parallel with one in series">
-            <p class="py-6"><br>I measured the change in voltage from the battery (5V) to the cathode of every lightbulb. Here are the results: </p>
-            <img src="../images/week 3/circuit5.png" style="width:45%" alt="schematic of 2 lightbulbsin parallel with one in series and voltages">
-
-
+            <p class="py-6"><br>I decided to use the circuit with two LEDs in parallel for my voltage demonstration. Here is a schematic for the circuit:</p>
+            <img src="../images/week 3/circuit4.png" style="width:45%" alt="schematic of 2 lightbulbs in parallel with one in series">
+            <p class="py-6"><br>I measured the change in voltage from each LED to the next-cathode to cathode. Here are the results: </p>
+            <img src="../images/week 3/circuit6.png" style="width:45%" alt="schematic of 2 lightbulbs in parallel with one in series and voltages">
+            <p class="py-6"><br>At this point, I had no idea what the internal resistance of a LED is. I needed to find the resistance in each LED to continue with anything in the future. I already have the voltage from one LED to the next. All I needed was the current. The following diagrams show how I placed the multimeter to find the currents.</p>
+            <div class="row">
+            <img src="../images/week 3/circuit8.png" style="width:30%" alt="schematic of 2 lightbulbs in parallel with one in series and an ammeter">
+            <img src="../images/week 3/circuit7.png" style="width:30%" alt="schematic of 2 lightbulbs in parallel with one in series and an ammeter">
+            <img src="../images/week 3/circuit9.png" style="width:30%" alt="schematic of 2 lightbulbs in parallel with one in series and an ammeter">
+            </div>
+            <p class="py-6"><br>Using Ohm's Law (V=IR), I found LED 1 to have a resistance of 27.5Ω, LED 2 is 49.5Ω and LED 3 is 37.79Ω. <br><br>I then created the following simple circuit:</p>
+            <img src="../images/week 3/circuit10.png" style="width:45%" alt="schematic of 1 lightbulbs series with resistor">
+            <p class="py-6"><br>Knowing that the total voltage was 5V and total resistance was 100+27.5Ω, I used Ohm's Law and found the current to be 39.22 mA.<br><br>I put my circuit into a simulation. Tinkercad tells me that the current in the circuit is 28.6 mA. This means that the LED has a resistance of 75Ω. This means I had some extreme errors.</p>
+            <img src="../images/week 3/circuit11.png" style="width:45%" alt="simulated circuit">
+            
+            <p class="py-6"><br><br><br><br><br><br>I (and David Cuartielles) created a circuit that reads the voltage of a potentiometer and blinks a light at a speed inversely proportional to how many volts the potentiometer has. The following is the physical setup: </p>
+            <img src="../images/week 3/circuit4.jpg" style="width:45%" alt="potentiometer circuit">
+            <p class="py-6"><br>Here is the code that is involved with the blinking:</p>
+            <img src="../images/week 3/circuitcode.png" style="width:45%" alt="code for potentiometer circuit">
+            <p class="py-6"><br>As the voltage increases, the time between blinks increases, and the time between blinks decreases as the voltage decreases.</p>
+        
 
         </div>
 
