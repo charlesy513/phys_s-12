@@ -67,15 +67,35 @@
             </div>
             <p class="py-6"><br>Using Ohm's Law (V=IR), I found LED 1 to have a resistance of 27.5Ω, LED 2 is 49.5Ω and LED 3 is 37.79Ω. <br><br>I then created the following simple circuit:</p>
             <img src="../images/week 3/circuit10.png" style="width:45%" alt="schematic of 1 lightbulbs series with resistor">
-            <p class="py-6"><br>Knowing that the total voltage was 5V and total resistance was 100+27.5Ω, I used Ohm's Law and found the current to be 39.22 mA.<br><br>I put my circuit into a simulation. Tinkercad tells me that the current in the circuit is 28.6 mA. This means that the LED has a resistance of 75Ω. This means I had some extreme errors.</p>
+            <p class="py-6"><br>Knowing that the total voltage was 5V and total resistance was 100+27.5Ω, I used Ohm's Law and found the current to be 39.22 mA.<br><br>I put my circuit into a simulation. Tinkercad tells me that the current in the circuit is 28.6 mA. This means that the LED has a resistance of 75Ω. This means I had some errors.</p>
             <img src="../images/week 3/circuit11.png" style="width:45%" alt="simulated circuit">
             
+            <p class="py-6"><br><br><br><br>After discussing with Victoria, I found out that instead of LEDs, I should have used resistors. I set up the same circuit with two resistors in parallel with one resistor in series with both. All three resistors have a 100Ω resistance. </p>
+            <img src="../images/week 3/circuit5.jpg" style="width:45%" alt="resistor circuit">
+            <p class="py-6"><br>Using Ohm's Law and resistor rules, I mathematically calculated the current in the circuit.</p>
+            <img src="../images/week 3/circuit6.jpg" style="width:45%" alt="Ohm's Law calculation">
+            <p class="py-6"><br>Next, I created another basic circuit that had one resistor and one LED. I am now assuming the LED has zero resistance.</p>
+            <img src="../images/week 3/circuit7.jpg" style="width:45%" alt="Resistor and LED">
+            <p class="py-6"><br>I calculated the current through the circuit.</p>
+            <img src="../images/week 3/circuit8.jpg" style="width:45%" alt="Ohm's Law calculation">
+            <p class="py-6"><br>Using tinkercad (simulation), I found the voltage across the resistor to be 2.86V. I then used Ohm's Law and found the current across the resistor to be 28.6 mA. </p>
+            <img src="../images/week 3/circuit12.png" style="width:45%" alt="tinkercad circuit">
+
+
+
+
+
+
+
+
             <p class="py-6"><br><br><br><br><br><br>I (and David Cuartielles) created a circuit that reads the voltage of a potentiometer and blinks a light at a speed inversely proportional to how many volts the potentiometer has. The following is the physical setup: </p>
             <img src="../images/week 3/circuit4.jpg" style="width:45%" alt="potentiometer circuit">
             <p class="py-6"><br>Here is the code that is involved with the blinking:</p>
             <img src="../images/week 3/circuitcode.png" style="width:45%" alt="code for potentiometer circuit">
             <p class="py-6"><br>As the voltage increases, the time between blinks increases, and the time between blinks decreases as the voltage decreases.<br><br>I then added a serial print line which displays the voltage on the serial monitor.</p>
             <img src="../images/week 3/circuitcode2.png" style="width:45%" alt="code for potentiometer circuit">
+            <p class="py-6"><br>Here is the output of the serial monitor as I reduced the voltage in the potentiometer.</p>
+            <iframe width="962" height="541" src="../images/week 3/serial.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </div>
 
