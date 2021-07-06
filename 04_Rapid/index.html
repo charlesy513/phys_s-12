@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Phys_S-12</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container px-lg-5">
+                <a class="navbar-brand"><hd class="nav_item" href="./index.html"></hd></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../project/index.html">Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h5 class="display-6 fw-bold">Week 4:</h5>
+                        <p class="p-6">Rapid Prototyping</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container px-lg-5">
+            <p class="py-6">For the week 4 assignment, I had two things I had in mind to do. The first is to create a kinetic art piece that simulated an airplane flying. The second was to create some sort of flap/aileron. <br><br>(This weekend, my 3D printer arrived so I wanted to mess around with it.)<br><br>The first thing I decided to do was program the code for the motor and complete the circuitry. For the kinetic art piece, I had a potentiometer that controlled the motor's speed of rotation. The program was straightforward. </p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/385545ea-f3e4-4eb9-b1cf-450db4a754e1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6"><br>As you can see from the code, I made A0 and A4, originally input pins, into output pins. I then made A0 into ground, and A4 into 3.3V. Knowing that the potentiometer would output to A2, I defined a constant as the A2 output. This output was then scaled down from 0-1023 to 0-255. I then set the motor rotation speed to that value.<br><br>The physical circuit looks like this: </p>
+            <img src="../images/week 4/motor1.jpg" style="width:45%" alt="circuit for motor">
+            <p class="py-6"><br>Next, I needed to print an airplane. Because I wanted to test my 3D printer fast, I decided to download an STL from the internet. The one I downloaded was an A220 by clerx. The STL's for the plane are below:</p>
+            <p class="py-6"><a class="normallink" href="../stl/week 4/Aft-Fus.stl" download="Back-Fus">Back Fuselage</a><a class="normallink" href="../stl/week 4/Fwd-Fus.stl" download="Front-Fus">Front Fuselage</a><a class="normallink" href="../stl/week 4/Engine-Left.stl" download="Left-Eng">Left Engine</a><a class="normallink" href="../stl/week 4/Engine-Right.stl" download="Right-Eng">Right Engine</a><a class="normallink" href="../stl/week 4/Fan-Blades.stl" download="Fan-Blades">Fan Blades</a><a class="normallink" href="../stl/week 4/Horz-Stab-Left.stl" download="Left-Hor-Stab">Left Horizontal Stabilizer</a><a class="normallink" href="../stl/week 4/Horz-Stab-Right.stl" download="Right-Hor_Stab">Right Horizontal Stabilizer</a><a class="normallink" href="../stl/week 4/Pin.stl" download="Pin">Pin</a><a class="normallink" href="../stl/week 4/Vert-Stab.stl" download="Vert-Stab">Vertical Stabilizer</a><a class="normallink" href="../stl/week 4/Wing-Left.stl" download="Left-Wing">Left Wing</a><a class="normallink" href="../stl/week 4/Wing-Right.stl" download="Right-Wing">Right Wing</a></p>
+            <p class="py-6"><br>I made my own stand which could be attached to the motor. This allowed the plane to spin. The STL for it is below:</p>
+            <p class="py-6"><a class="normallink" href="../stl/week 4/standv1.stl" download="stand">Stand</a></p>
+            <p class="py-6">After printing everything and using hot glue to secure the parts, I placed the plane onto the motor. The result was not fantastic, but everything worked. </p>
+            <iframe width="962" height="541" src="../images/week 4/motor2.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="py-6"><br><br><br><br><br>My next project was to attempt to make flaps. The first step was to code the program. This program was a little more complex than the previous one.<br></p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/70092bf4-8a1a-45f0-93a0-c7f4372e8c00/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6"><br>Since this code requires directional changes, I had to define it; I did this with the constant B. The speed the motor turns is now controlled by constant A. From here, many things are pretty similar-A2 is still giving the value of the potentiometer, and I am still mapping that value from a 0-1023 scale to 0-255. The main difference is that there is now an if, then statement. That statement makes half the potentiometer values turn the motor one way, and the other half make the motor turn in the opposite direction. (circuit for motor is still the same.)<br><br><br>Building this flap was surprisingly difficult, and I ran into some problems on the way. Here is my original prototype:</p>
+            <img src="../images/week 4/motor2.jpg" style="width:45%" alt="first prototype for flaps">
+            <p class="py-6"><br>However, just as I started to build it, I found that I did not have a hinge. This meant my first design would move linearly rather than rotationally.  After brainstorming, I decided to make a hinge with a toothpick. Then I realized I should connect the flap with a long straw; the straw would rotate the flap. That's when I came up with my final prototype:</p>
+            <img src="../images/week 4/motor3.jpg" style="width:45%" alt="final prototype for flaps">
+            <p class="py-6"><br><br>After the prototype was complete, the building was easy. I made use of styrofoam for ease of design, and toothpicks were stuck into them. Some hot glue was used to secure the motor to the styrofoam circle.<br><br>Here is the finished result:</p>
+            <iframe width="962" height="541" src="../images/week 4/motor3.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="py-6"><br>Along the way, I found out the sketch I uploaded to the adafruit stays there forever so I don't need to connect the adafruit to my computer. I only need a power source (a portable charger in this case). This introduces more options for future designs.</p>
+        </div>
+
+    <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Phys_S-12 2021</p></div>
+    </footer>
+ <!-- Bootstrap core JS-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Core theme JS-->
+ <script src="js/scripts.js"></script>
+</body>
+</html>
