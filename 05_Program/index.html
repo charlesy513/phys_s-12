@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Phys_S-12</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container px-lg-5">
+                <a class="navbar-brand"><hd class="nav_item" href="./index.html"></hd></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../project/index.html">Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h5 class="display-6 fw-bold">Week 5:</h5>
+                        <p class="p-6">Programmable Electronics</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container px-lg-5">
+            <p class="py-6">There were two assignments for week 5. They are the following:<br>
+            <ul>
+                <li>Program a microcontroller to produce an output using at least one button for input. Include a conditional statement and a for() loop.</li>
+                <li>Think about and CAD material for the final project.</li>
+            </ul></p>
+            <p class="py-6">Because I am thinking of making an RC airplane for my final project, I decided to continue my work on flaps (yes, I know I have no creativity). I decided to switch over from the metro board this week to the feather. This change was mainly because the feather was smaller. The feather also has WIFI capabilities, but that was no of utmost concern. <br><br>Switching over to the feather was not too difficult. One significant difference was that analogWrite does not exist on the feather; instead, there is ledcWrite which is explained well here: </p>
+            <p class="py-6"><a href="https://techexplorations.com/guides/esp32/begin/pwm/">https://techexplorations.com/guides/esp32/begin/pwm/</a><br></p>
+            <p class="py-6">I started the project by writing the code. Because I was still unfamiliar with ledcWrite despite reading the article, I installed a library that allowed me to analogWrite with the feather (or any other esp32 board). This is the link to that library:</p>
+            <p class="py-6"><a href="https://www.arduino.cc/reference/en/libraries/esp32-analogwrite/">https://www.arduino.cc/reference/en/libraries/esp32-analogwrite/</a><br></p>
+            <p class="py-6">Despite all my efforts to get my feather working, the motor didn't work. I could hear the motor turning but with little torque. I decided to return to the metro. The metro also started having problems with me; I couldn't upload. Without any choice, I turned to my trusty Arduino mega that I found in my closet.</p>
+            <p class="py-6">I created some code for my flap, but the code did not do what I wanted. What I wanted the code to do was move the motor a certain time when the button was pressed and move the motor a certain time in the opposite direction when the button was pressed a second time. You can see this code here:</p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/7263bcea-89d6-4ee8-96f7-b42147f5c71a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6">Unfortunately, this code did not work. The motor would not change directions when I press the button twice.<br><br>
+            I then consulted the help of Victoria. She linked me many examples. I modified one of them and got this code:</p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/0fb63494-223a-47f0-b630-5fe8778a29b6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6">This code worked than before. However, it still did not do what I wanted. When I did not press any buttons, the motor spins clockwise, and then when I press the button, the motor spins counterclockwise.<br><br>Last, I tried the following code. This code would turn for a certain time in one direction when I press the button and return to the original stop when I release the button. This was not movement I wanted but was the best movement I got.</p>
+</p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/e2ac6322-c478-499c-b334-023cc28c8f70/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6">The following is the circuit for the motor:</p>
+            <img src="../images/week 5/circuit.jpg" style="width:45%" alt="circuit for motor">
+            <p class="py-6">At this point, I was extremely tired and moved on to the 3D printing aspect of the flaps. I used Fusion 360 and created the following components which make up the wing:</p>
+            <p class="py-6"><a class="normallink" href="../stl/week 5/Component2.stl" download="Flaps1">Flaps 1</a><a class="normallink" href="../stl/week 5/Component1.stl" download="Flaps2">Flaps 2</a></p>
+            <img src="../images/week 5/wing.jpg" style="width:45%" alt="3D printed airplane wing and flaps">
+            <p class="py-6"><br><br>After assembling everything together and using parts from last week, I designed a working flap that activates with one button.</p>
+            <iframe width="962" height="541" src="../images/week 5/motor3.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="py-6"><br><br>To complete the homework, I then included a for loop that determines how fast the flap moves.</p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/8d96af33-e744-4afe-b77f-6163fe7badd3/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+
+
+        </div>
+
+    <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Phys_S-12 2021</p></div>
+    </footer>
+ <!-- Bootstrap core JS-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Core theme JS-->
+ <script src="js/scripts.js"></script>
+</body>
+</html>
