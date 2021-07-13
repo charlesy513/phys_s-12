@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Phys_S-12</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container px-lg-5">
+                <a class="navbar-brand"><hd class="nav_item" href="./index.html"></hd></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../project/index.html">Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h5 class="display-6 fw-bold">Week 6:</h5>
+                        <p class="p-6">3D Design & Printing</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container px-lg-5">
+            <p class="py-6">The assignment for week 6 was to design and slice a component for my final project. Also, we must use a photogrammetry application to scan something.<br><br>At first, I decided to model the engine of the plane I will build for my final project. I found a side view of the engine online and used the image as a canvas to create the general size and shape of the engine. </p>
+            <img src="../fusion360 images/week 6/large.jpg" style="width:45%" alt="engine image">
+            <p class="py-6"><br>The result was great!</p>
+            <img src="../images/week 6/fusion3.png" style="width:45%" alt="engine fusion">
+            <p class="py-6"><br>To create this engine, I first split the engine in half vertically, used the sketch feature and outlined the engine, then rotated the image around an axle. </p>
+        <div class="row">
+            <img src="../images/week 6/fusion1.png" style="width:45%" alt="engine fusion">
+            <img src="../images/week 6/fusion2.png" style="width:45%" alt="engine fusion">
+        </div>
+            <p class="py-6"><br><br>With the engine shaft complete, I decided to make the turbines inside. This process required two sketches. Each sketch is a cross-sectional view of the fan. I then lofted the two sketches and used a "circular pattern" to create a turbine. Many of these turbines were created, all different shapes and sizes, to test which created the most thrust.</p>
+        <div class="row">
+            <img src="../images/week 6/fusion5.png" style="width:45%" alt="fan fusion">
+            <img src="../images/week 6/fusion6.png" style="width:45%" alt="fan fusion">
+        </div>
+            <p class="py-6"><br>After these two items were modeled, I 3D printed both. I also had bought a brushless motor that can spin at 16650 RPMs. Adding all the pieces together with the circuit Arduino board, I created some sort of a working motor. Below is a video of the engine spinning, the code for my Arduino, and the wiring.</p>
+            <iframe width="962" height="541" src="../images/week 6/motor.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/743ba704-c2cd-4502-8e3a-7a6e6235f965/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <img src="../images/week 6/circuit.jpg" style="width:45%" alt="circuit of engine">
+            <p class="py-6"><br><br><br>Because I had some extra time on my hands, I decided to model the rest of the plane. Little did I know it was going to be a ~30-hour journey. I imported some canvas I found from the official General Dynamics page for the f16, and I was off.<br><br>I first started with the vertical stabilizer. I wrap a layer around the engine and then easily traced the canvas to recreate the vertical stabilizer.</p>
+        <div class="row">
+            <img src="../images/week 6/fusion8.png" style="width:45%" alt="vert stab fusion">
+            <img src="../images/week 6/fusion9.png" style="width:45%" alt="vert stab fusion">
+        </div>
+            <p class="py-6"><br>The next component I made was the horizontal stabilizers, and the horizontal stabilizer supports. These were a pain to model since I had to make sure all bodies were not intersecting. I also had to keep in mind the aerodynamics of the aircraft. The stabilizers were made so that the air pressure above the stabilizer would be lower than the air pressure below the stabilizer. Later on, I also did this with the wings.</p>
+        <div class="row">
+            <img src="../images/week 6/fusion10.png" style="width:45%" alt="horizontal stab fusion">
+            <img src="../images/week 6/fusion11.png" style="width:45%" alt="horizontal stab fusion">
+        </div>
+            <p class="py-6"><br>I next created the middle section of the body. Doing all this was easy because I just made sketches and rotated them around 360 degrees. When the middle body was created, the plane started to come together.</p>
+        <div class="row">
+            <img src="../images/week 6/fusion12.png" style="width:45%" alt="mid body fusion">
+            <img src="../images/week 6/fusion13.png" style="width:45%" alt="mid body fusion">
+        </div>
+            <p class="py-6"><br>I created the winds by first creating supports. These supports prevent the wing from bending at weird angles. After these supports were made, the wings were designed with the air pressure concept in mind.</p>
+        <div class="row">
+            <img src="../images/week 6/fusion14.png" style="width:45%" alt="wing fusion">
+            <img src="../images/week 6/fusion15.png" style="width:45%" alt="wing fusion">
+            <img src="../images/week 6/fusion16.png" style="width:45%" alt="wing fusion">
+            <img src="../images/week 6/fusion17.png" style="width:45%" alt="wing fusion">
+        </div>
+            <p class="py-6"><br>Finally, I started designing the front of the plane. This part was difficult, and I still have not finished. I only completed the nose and bottom vent. Here are the results. </p>
+        <div class="row">
+            <img src="../images/week 6/fusion18.png" style="width:45%" alt="front fusion">
+            <img src="../images/week 6/fusion19.png" style="width:45%" alt="front fusion">
+        </div>
+            <iframe src="https://students19308.autodesk360.com/shares/public/SH919a0QTf3c32634dcfcc41bf056a15bd90?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            <p class="py-6"><a class="normallink" href="../stl/week 6/Engine.stl" download="Engine">Engine</a><a class="normallink" href="../stl/week 6/vertical stab.stl" download="Vertical Stabilizer">Vertical Stabilizer</a>
+            <a class="normallink" href="../stl/week 6/Under vert stab.stl" download="Under Vertical Stabilizer">Under Vertical Stabilizer</a>
+            <a class="normallink" href="../stl/week 6/horz stab supports.stl" download="Horizontal Stab Supports">Horizontal Stab Supports</a>
+            <a class="normallink" href="../stl/week 6/Horz stabs.stl" download="Horizontal Stabilizer">Horizontal Stabilizer</a>
+            <a class="normallink" href="../stl/week 6/Mid Body Top.stl" download="Mid Body Top">Mid Body Top</a>
+            <a class="normallink" href="../stl/week 6/Mid Body Bot.stl" download="Mid Body Bot">Mid Body Bot</a>
+            <a class="normallink" href="../stl/week 6/Mid Body Support.stl" download="Mid Body Support">Mid Body Support</a>
+            <a class="normallink" href="../stl/week 6/Wings support.stl" download="Wings Support">Wings Support</a>
+            <a class="normallink" href="../stl/week 6/Wings connector.stl" download="Wings Connector">Wings Connector</a>
+            <a class="normallink" href="../stl/week 6/Wings.stl" download="Wings">Wings</a>
+            <a class="normallink" href="../stl/week 6/Tube.stl" download="Tube">Tube</a>
+            <a class="normallink" href="../stl/week 6/bot head.stl" download="Bottom of Head">Bottom of Head</a></p>
+
+            <p class="py-6"><br><br>I decided to use 3DF Zephyr to scan a plane on the rug for the photogrammetry portion of the homework. I used the following photos:</p>
+            <img src="../images/week 6/pano1.png" style="width:45%" alt="images">
+            <p class="py-6"><br>The first time scanning the plane, I used default mode for everything. The process was relatively fast, but the mesh created was not great. Everything was blurring and in lousy resolution; it was almost like I was watching a 70's sitcom.</p>
+        <div class="row">
+            <img src="../images/week 6/pano2.png" style="width:45%" alt="scanned plane">
+            <img src="../images/week 6/pano3.png" style="width:45%" alt="scanned plane ">
+        </div>
+        <p class="py-6"><br>I decided to use high for everything the next time I used the photos. It took a long time to render everything, but the result was a lot better. I could actually make out the plane from the blur. </p>
+        <img src="../images/week 6/pano5.png" style="width:45%" alt="scanned plane ">
+        <p class="py-6"><br>Through this photogrammetry experience, I learned that a) my phone has a terrible camera and b) higher resolution is definitely worth it.<br></p>
+  </div>
+
+    <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Phys_S-12 2021</p></div>
+    </footer>
+ <!-- Bootstrap core JS-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Core theme JS-->
+ <script src="js/scripts.js"></script>
+</body>
+</html>
