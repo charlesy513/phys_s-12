@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Phys_S-12</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container px-lg-5">
+                <a class="navbar-brand"><hd class="nav_item" href="./index.html"></hd></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../project/index.html">Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h5 class="display-6 fw-bold">Week 7:</h5>
+                        <p class="p-6">Electronic Input Devices</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container px-lg-5">
+            <p class="py-6">Week 7 was when sensors were introduced to us. For the assignment, we needed to experiment with a sensor and record data, producing a chart. Since the thermistor seemed to have already been used a lot, I decided to try my hand on the phototransistor. <br><br>Using Rob Hart's webpage and other websites, I created a basic circuit. The circuit and the pages are below:</p>
+            <p class="py-6"><a href="https://roberthart56.github.io/SCFAB/SC_lab/Sensors/Light/Photodetectors/index.html">https://roberthart56.github.io/SCFAB/SC_lab/Sensors/Light/Photodetectors/index.html</a><br></p>
+            <p class="py-6"><a href="https://learn.parallax.com/tutorials/robot/shield-bot/robotics-board-education-shield-arduino/chapter-6-light-sensitive-11">https://learn.parallax.com/tutorials/robot/shield-bot/robotics-board-education-shield-arduino/chapter-6-light-sensitive-11</a><br></p>
+            <img src="../images/week 7/circuit1.jpg" style="width:45%" alt="phototransistor circuit">
+            <p class="py-6"><br>I got code from <a href="https://sites.google.com/site/therobotronics/arduino/connect-a-phototransistor-to-arduino">https://sites.google.com/site/therobotronics/arduino/connect-a-phototransistor-to-arduino</a> and adapted it. I uploaded this code:</p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/8d9ea1fa-995a-4bb4-bd96-3c3ac0deda1d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6"><br>The phototransistor definitely works. I recorded a video of the serial plotter as I moved the phototransistor around a light source.</p>
+            <iframe width="962" height="541" src="../images/week 7/circuit.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="py-6"><br>I found that the photoresistor was not sensitive. To increase the sensitivity, I first decreased the value of the resistor in the circuit. This actually decreased the sensitivity of the phototransistor even more. I then increased the value of the resistance. Initially, I had a 10kΩ resistor; I replaced it with a 10mΩ resistor. Once that resistor was added in, the phototransistor could detect light from almost a foot away.</p>
+            <iframe width="962" height="541" src="../images/week 7/circuit1.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="py-6"><br>What I noticed, though, is that the phototransistor seemed to have a maximum value that the reading could not go above. This must mean that when I changed the resistor in the circuit, the entire range (minimum and maximum) was changed.<br><br>I changed my resistor to a 1kΩ one and sure enough, the maximum distance was less, but the minimum distance was closer to the lightbulb.<br><br>I next used the 1kΩ circuit to create a distance vs. phototransistor reading graph. I used my calipers to measure the distance between the lightbulb and my phototransistor; then, I recorded the value my serial monitor was plopping out.</p>
+            <img src="../images/week 7/data.png" style="width:100%" alt="data for phototransistor">
+            <p class="py-6"><br>From the data, I honestly could not tell what the relationship was. The graph looks linear with maybe one outlier, or the graph could be quadratic. The chances the graph is linear is better, so let's go with that (Very scientific).</p>
+            <p class="py-6"><br><br><br><br>The next assignment was to show data in the form of a graph or table with the capacitor sensor we made in class. I know that as the distance between capacitors increases, the capacitance decreases, so I will graph this relationship. <br><br>To start, I uploaded the code we used in class onto my Arduino.</p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/e2dfbba0-b1f8-4b14-95b9-3e410e242b1d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6"><br>Next, following the image on <a href="https://roberthart56.github.io/SCFAB/SC_lab/Sensors/CapacitiveTouch/index.html">Robert Hart's website</a>, I set up my circuit the exact same way. The only difference was I also had a copper plate connected to ground. I used a 1mΩ resistor in the circuit.<br><br>I used my calipers to find the distance between the plates; then, I used the Arduino output to tell me the capacitance value.</p>
+            <img src="../images/week 7/data1.png" style="width:100%" alt="data for capacitance">
+            <p class="py-6"><br>I can see there is definitely an inverse proportionality with the data. This is confirmed by the capacitance equation C = ε(A/d). As the distance between two plates decreases, the total capacitance increases inversely.</p>
+
+  </div>
+
+    <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Phys_S-12 2021</p></div>
+    </footer>
+ <!-- Bootstrap core JS-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Core theme JS-->
+ <script src="js/scripts.js"></script>
+</body>
+</html>
