@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Phys_S-12</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container px-lg-5">
+                <a class="navbar-brand"><hd class="nav_item" href="./index.html"></hd></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../project/index.html">Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h5 class="display-6 fw-bold">Week 8:</h5>
+                        <p class="p-6">Electronic Output Devices</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container px-lg-5">
+            <p class="py-6">The assignment for week 8 is 1) use an output device you haven't used before and 2) write a microcontroller program that integrates at least one input device and one output device avoiding the delay() command.<br><br>I had already used the buzzer, so I decided to try my hands on the LED strips and servos. <br><br>It just so happens that all my servos are connected to my final project (I found more servos later on). That was fine, and I decided to incorporate some LED strips into my final project for this homework. <br><br>The goal I had in mind was that there would be three buttons. These buttons would control the angle of the servos and also control the color of the LED based on whatever the angle is. If none of the buttons are pressed, the LED strips would be blinking just like normal anti-collision lights.<br><br>Here is a schematic of my desired setup (the IR Sensor is the LED strip):<br><br></p>
+            <img src="../images/week 8/circuit1.png" style="width:80%" alt="circuit">
+            <p class="py-6"><br>The next portion of the process was to write the code. I first found code of a LED strip and then modified it.<br><br>Since I was using Servos, I first added the servos library in my sketch. I also defined all my buttons as input pullups.<br></p>
+            <p class="py-6">I added some if-else statements which tell the LED strip to turn a certain color if a certain button is pressed. In addition, the servos will move to a certain location for each button. Here is the code:<br><br></p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/87e9eb73-3d0a-4931-bd5e-5a2f984da4a0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6"><br>There were some problems I was not able to resolve. 1) The LED strip refused to blink. I tried my blinking code with one single LED, and everything worked perfectly fine. When I incorporate the code into the LED strip, the code didn't work. Here is the code I used for one single LED:</p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/c318d176-7979-49e3-a7a9-65e8c51aba58/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6"><br>To try and resolve this problem, I used a LED with the servos instead of the LED strip. Everything worked perfectly. Here is the code:</p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/502d89b4-2ce2-4d23-9d86-cb109ca4d0a1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6"><br>Here is a video of the end result. Unfortunately, I was unable to get the LED strip to blink, but the LED blinked just fine.</p>
+            <iframe width="962" height="541" src="../images/week 8/circuit.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+  </div>
+
+    <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Phys_S-12 2021</p></div>
+    </footer>
+ <!-- Bootstrap core JS-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Core theme JS-->
+ <script src="js/scripts.js"></script>
+</body>
+</html>
