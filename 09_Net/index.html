@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Phys_S-12</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container px-lg-5">
+                <a class="navbar-brand"><hd class="nav_item" href="./index.html"></hd></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../project/index.html">Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h5 class="display-6 fw-bold">Week 9:</h5>
+                        <p class="p-6">Networking</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container px-lg-5">
+            <p class="py-6">The homework for week 9 is the following:
+            <ul>
+                <li>Control a board from a local wireless network.</li>
+                <li>Program a microcontroller to obtain and respond to information from the internet.</li>
+            </ul><br></p>
+            <p class="py-6">The two assignments are related, so I decided I would use the information from the internet to control the board.<br><br>The project I had in mind involved APIs and some other coding. I started with a sketch that we went over in class. This sketch pulled information from the national weather service. Right away, I changed the URL from the national weather service to RapidAPI, where I can pull information from the stock market. <br><br>It took a lot of time for me to figure out how to incorporate APIs that were not from the national weather service. I needed to add a header, and I had no idea how to do it. After some research, I ran across <a href="https://stackoverflow.com/questions/65619359/how-to-add-headers-to-http-request-in-arduino-ide">https://stackoverflow.com/questions/65619359/how-to-add-headers-to-http-request-in-arduino-ide</a>, which taught me how to enter the API key and host. Once I was able to pull the information from the stock market, everything else was a piece of cake. Here was the code I had:</p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/c4d43b41-2c66-4c20-8fd0-6a974a3d383a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6"><br>I needed only to pull the current stock price from the entire document. That's when I incorporated the ArdunioJson library that lets me cherrypick data.<br><br>The first time I ran the code, there was a lack of memory. After some research, I found out this error meant I needed to allocate more bytes for the program to run. I changed 10,000 bytes to 100,000 bytes. After I did that,  everything worked fine.</p>
+            <img src="../images/week 9/stocks1.png" style="width:65%" alt="Serial for code below">
+            <iframe src=https://create.arduino.cc/editor/charlesy513/25c4a332-f32b-44f6-a2e2-2304830e3b15/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6"><br>Next, I need to use the data extracted to control the board to do something. I decided to make a servo spin depending on the output of the current stock price of Tesla. I downloaded the esp32servo library for this.<br><br>The code is the following:</p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/9fab56df-80bd-4f45-9419-bc8526f9a16c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6"><br>If the value of the current stock price is above what it was 10 seconds ago, the servo will move to a certain angle. The same happens if the current stock price is under what it was 10 seconds ago.<br><br>Below is a video of this epic stock predictor in action:</p>
+            <iframe width="962" height="541" src="../images/week 9/stocks.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="py-6"><br>As you can see, as the price of the stocks went down, the predictor told me exactly what to do. The exact message? "If you invent, you lose more money."</p>
+
+
+  </div>
+
+    <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Phys_S-12 2021</p></div>
+    </footer>
+ <!-- Bootstrap core JS-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Core theme JS-->
+ <script src="js/scripts.js"></script>
+</body>
+</html>
