@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Phys_S-12</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container px-lg-5">
+                <a class="navbar-brand"><hd class="nav_item" href="./index.html"></hd></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../project/index.html">Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h5 class="display-6 fw-bold">Week 10:</h5>
+                        <p class="p-6">Machine building</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container px-lg-5">
+            <p class="py-6">Time to build a machine! The homework for week 10 was to make a machine that is controlled from a computer or phone, using at least one stepper motor.<br><br>I started by assembling the slider using the instructions on the week ten website. Then, I decided to make a constant timer that incorporates the slider. This way, I can keep track of time easily, and I would be aware of wasting time.<br><br>The first thought in my mind was to create a capacitance sensor. There would be one copper plate on the slider and one copper plate in a fixed position. Every couple of minutes, the slider would move across and trigger a sound representing an alarm.<br><br>To start off, I created the circuit for this system.<br></p>
+            <img src="../images/week 10/circuit1.jpg" style="width:65%" alt="circuit for system">
+            <p class="py-6"><br>I used a buzzer to make the sound.<br></p>
+            <p class="py-6">I next wrote the code for the setup. Everything went surprisingly easily, and there were no hitch-ups. The code moves the slider in one direction. Since the bottom of the slider has a copper plate and the ground also has one, once the slider reaches one side, the buzzer will play a sound depending on the capacitance value. The slider then moves back to the original position and waits for a certain amount of time.<br></p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/2213f0e5-b8fa-43c1-b816-641ebdd1ad1b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6"><br>Unfortunately, my motors all seemed to break, and I was unable to fix them. I tried the original code and reset the board, but the motor continued to hum without moving. Seeing no other choice, I recorded what the slider was suppose to do:<br></p>
+            <iframe width="962" height="541" src="../images/week 10/circuit.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+ 
+            
+
+  </div>
+
+    <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Phys_S-12 2021</p></div>
+    </footer>
+ <!-- Bootstrap core JS-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Core theme JS-->
+ <script src="js/scripts.js"></script>
+</body>
+</html>
