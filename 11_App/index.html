@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Phys_S-12</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container px-lg-5">
+                <a class="navbar-brand"><hd class="nav_item" href="./index.html"></hd></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../project/index.html">Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h5 class="display-6 fw-bold">Week 11:</h5>
+                        <p class="p-6">Application Programming</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container px-lg-5">
+            <p class="py-6">The homework for week 11 was to send data to a computer and visualize the results. <br><br>During class, I set up my esp32-cam using the following site:<br><br><a href="https://randomnerdtutorials.com/program-upload-code-esp32-cam/">https://randomnerdtutorials.com/program-upload-code-esp32-cam</a><br><br>Afterward, I copied the code from <a href="https://randomnerdtutorials.com/esp32-cam-opencv-js-color-detection-tracking/">https://randomnerdtutorials.com/esp32-cam-opencv-js-color-detection-tracking</a> and followed the instructions of the serial monitor. I was able to track my face using the camera and output a coordinate.<br><br></p>
+            <iframe src=https://create.arduino.cc/editor/charlesy513/646b7d73-6fcd-42f5-bb8a-22efbdfdf4cf/preview?F=index_OCV_ColorTrack.h?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <p class="py-6"><br>In order to show that the tracking worked, I tried to make it so if I move my head to a specific position, some light would turn on. This never worked out, however, and the light never turned on. I suspect this is because of the lag of the camera. Here is a video that shows how jittery the footage was.<br></p>
+            <iframe width="962" height="541" src="../images/week 11/head.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="py-6"><br>To complete the assignment, I recorded the serial monitor, which displayed real-time the location of my head in the camera.<br></p>
+            <iframe width="962" height="541" src="../images/week 11/serial.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="py-6"><br>After reviewing the footage, I think it may be the code that is forcing the fps of the camera to decrease. To test this, I used another code that lets me use the camera on the esp32-cam.<br><br>I then followed the tutorial on randomnerd's page.<br><br><a href="https://randomnerdtutorials.com/esp32-cam-video-streaming-face-recognition-arduino-ide/">https://randomnerdtutorials.com/esp32-cam-video-streaming-face-recognition-arduino-ide</a><br><br></p>
+            <p class="py-6">I was definitely correct. Using another code, the camera had way higher fps, as shown below.<br></p>
+            <iframe width="962" height="541" src="../images/week 11/head1.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="py-6"><br>I then tried to modify my tracking code for higher frames to no avail. If I had more time, I would try to add tracking to the new code.<br></p>
+
+
+
+ 
+            
+
+  </div>
+
+    <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Phys_S-12 2021</p></div>
+    </footer>
+ <!-- Bootstrap core JS-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Core theme JS-->
+ <script src="js/scripts.js"></script>
+</body>
+</html>
